@@ -1,0 +1,30 @@
+body {
+    background-color: rgba(219, 219, 214, 0.884)
+}
+
+q{
+    color:rgb(62, 92, 92)
+}
+
+#prvaslika {
+    border: solid 2px rgb(62, 92, 92);
+    
+}
+
+.lista {
+    border: solid #222324;
+    color: darkgreen;
+    margin: 5px;
+}
+
+#drugaslika {
+    float:right;
+}
+
+.prednosti li:nth-child(odd) {
+    background:lightgreen;
+}
+
+.prednosti li:nth-child(even) {
+    background:lightseagreen;
+}
