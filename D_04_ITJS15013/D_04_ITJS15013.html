@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domaci zadatak_04
+    </title>
+    <link rel="stylesheet" href="D_04_ITJS15013.css">
+</head>
+<body>
+    <form method="post">
+        <fieldset>
+            <legend><h3>Login details</h3></legend>
+                 
+        
+                <p>
+                    <label for="ime">Name:</label>
+                    <input type="text" name="ime" class="login">
+                </p>
+
+                <p>
+                    <label for="mejl">Email:</label>
+                    <input type="email" name="mejl" class="login">
+                </p>
+                <p>
+                    <label for="pas">Password:</label>
+                    <input type="password" name="pas" class="login">
+                </p>
+            
+        </fieldset>
+
+        <fieldset>
+            <legend><h3>Your feedback</h3></legend> <br>
+
+            <div class="emotions">
+
+                <label for="emotions">Please check all the emotions that apply to you:</label>
+                <p> 
+                     
+                    Angry <input type="checkbox" name="emotions" class="ang" value="ang"> <br>
+                    Sad <input type="checkbox" name="emotions" class="ang" value="sad"> <br>
+                    Happy<input type="checkbox" name="emotions" class="ang" value="hap" checked> <br>
+                    Ambivalent<input type="checkbox" name="emotions" class="ang" value="amb"> 
+
+
+                </p>
+
+            </div>
+            <div class="satisfied">  
+
+                <label for="satisfied"> How satisfied were you with our service?</label> <br>
+
+                <p>
+                   
+                    Very satisfied <input type="radio" name="satisfied" class="ang" value="vs"> <br>
+                    Satisfied <input type="radio" name="satisfied" class="ang" value="s"> <br>
+                    Didnt care <input type="radio" name="satisfied" class="ang" value="dc"> <br>
+                    Dissatisfied <input type="radio" name="satisfied" class="ang" value="d"> <br>
+                    Very dissatisfied <input type="radio" name="satisfied" class="ang" value="vd"> <br>
+                </p>
+
+            </div> 
+            <div>
+
+                <p>
+                    <label for="komentar">Further comments:</label>
+                    <textarea name="komentar" id="komentar" cols="20" rows="3"></textarea>
+                </p>
+
+             </div>   
+        </fieldset>
+
+            
+                <p>
+                    <label for="foto"> Bio photo:</label>
+                    <input type="file" name="foto" id="foto">
+                </p>
+
+                <p>
+                    <label for="lokacija"> Location visited:</label>
+                    <select name="lokacija" id="lokacija">
+                        <option value="sl"> Select location</option>
+                        <option value="ld">London</option>
+                        <option value="bg">Belgrade</option>
+                        <option value="bc">Barcelona</option>
+
+                    </select>
+                </p>
+
+            <div class="submitreset">   
+
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+                
+                <p>
+                    <input type="reset" value="reset">
+                </p>
+
+            </div>    
+
+              
+
+
+    </form>
+</body>
+</html>

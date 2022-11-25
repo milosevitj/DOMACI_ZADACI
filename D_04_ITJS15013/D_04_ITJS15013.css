@@ -1,0 +1,39 @@
+fieldset{
+    margin-right: 1350px;
+    background-color: rgb(125, 230, 195);
+    border-color: red ;
+    border-style:solid;
+}
+
+
+.login{
+    margin-left: 40px;    
+}
+
+
+.emotions{
+    margin-left: 50px;
+}
+
+p{
+    margin-left: 50px;
+}
+
+.satisfied{
+    margin-left: 50px;
+}
+
+
+.ang{
+    margin-left: 50px;
+    margin-top: 10px; 
+}
+
+#foto{
+    margin-left:40px; 
+}
+
+.submitreset{
+    margin-left: 50px;
+
+}
