@@ -1,0 +1,35 @@
+img{
+    width: 180px;
+    height: 150px;
+}
+section{
+    height:700px;
+    overflow: hidden;
+    width: 700px;
+    text-align: justify;
+    
+}
+div{
+    float: left;
+    width: 230px;
+    height: 200px;
+    text-align: center;
+    font-size: 13px;
+    
+}
+aside{
+    width: 700px;
+    height: 92px;
+    position:relative;
+    bottom: 470px; ;
+    overflow: hidden; /* ukoliko je u domacem zadatku trebalo da tekst bude isecen postavila sam ovaj kod*/
+    text-align: justify;
+}
+
+aside p{
+    width:800px;
+    position: relative;
+    bottom: 20px;
+    font-size: 10px;
+    text-align: justify;
+}
