@@ -23,7 +23,6 @@ if (preostalo < n/2){
 // ZADATAK 3
 
 let u = 10000; // dnevni unos u kJ
-let kcal = 1;
 let kJ = 4.1868;
 let vrednost = u/kJ;
 
