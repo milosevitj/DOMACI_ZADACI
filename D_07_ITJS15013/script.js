@@ -33,3 +33,4 @@ if(vrednost<2000){
 else{
     console.log("Nije potrebno uvecati dnevni unos");
 }
+
