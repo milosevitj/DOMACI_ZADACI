@@ -6,36 +6,31 @@ function aritmetickaSredina (n,m){
     let sredina=0;
     let brBrojeva=0;
     for(i=n; i<=m;i++){
-        if(i%3==1){
+        if(i%3!=0){
             console.log(i)
         sredina=sredina+i;
         brBrojeva++;
-        aritmetickaSredina=sredina/brBrojeva;
     }
     }
-    console.log(`aritmeticka sredina brojeva od ${n} do ${m} koji nisu deljivi sa 3 je: ${aritmetickaSredina }`);
-    return(i,m)
-    
+    return sredina/brBrojeva
 }
-aritmetickaSredina(1,20);
+console.log(aritmetickaSredina(1,20));
 
 //ARROW
 
 let aritmeticka = (n,m) => {
-     sredina=0;
-     brBrojeva=0;
+    let sredina=0;
+    let brBrojeva=0;
     for(i=n; i<=m;i++){
-        if(i%3==1){
+        if(i%3!=0){
         sredina=sredina+i;
         brBrojeva++;
     }
     }
-    aritmeticka=sredina/brBrojeva;
-    console.log(`aritmeticka sredina brojeva od ${n} do ${m} koji nisu deljivi si 3 je: ${aritmeticka}`);
-    return(i,m)
+    return sredina/brBrojeva
     
 }
-aritmeticka(1,50);
+console.log(aritmeticka(1,50));
 
 // 2. Zadatak Napisati funkciju kojoj se prosleđuje ceo broj i string, a ona ispisuje taj string u paragrafu koji ima prosleđenu veličinu fonta.
 
