@@ -30,13 +30,12 @@ document.body.innerHTML += tabela(timovi)
 // Dat je niz stringova čiji su članovi putanje do slika. 
 // Prikazati sve slike u html dokumentu, pri čemu su putanje da slika one putanje koje su navedene u nizu.
 
-let slike = [`<img src="slike/slika1.jpg" width="350px"> <img src="slike/slika2.jpg" width="350px"> <img src="slike/slika3.jpg" width="350px">`]
-
+let putanja = ["slike/slika1.jpg", "slike/slika2.jpg", "slike/slika3.jpg"]
 let str = niz =>{
-    let slicice= `<img>`
+    let putanja= "";
     for(i=0;i<niz.length;i++){
-        slicice=slicice+niz[i];
+        putanja=putanja+ `<img src="${niz[i]}">`
     }
-    return slicice;
+    return putanja;
 }
-document.body.innerHTML += str(slike)
+document.body.innerHTML += str(putanja)
