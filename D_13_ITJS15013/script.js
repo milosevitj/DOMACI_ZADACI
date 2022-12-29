@@ -1,6 +1,6 @@
 let dan = {
-    temperature: [3,15,11],
-    kisa: false,
+    temperature: [-6,15,11],
+    kisa: true,
     oblacno: true,
     suncano: false,
 
@@ -29,7 +29,7 @@ nepovoljanDan:function(){
 
 neuobicajenDan:function(){
     for(let i=0; i<this.temperature.length;i++){
-        if(this.temperature[i]<-5 && this.kisa==true){
+        if(this.temperature[i]<-5 && this.kisa){
             return true;
         }
         else if(this.temperature[i]>25 && this.oblacno==true){
@@ -41,7 +41,6 @@ neuobicajenDan:function(){
     return false;
 },
 }
-
 console.log(dan.tropskiDan());
 console.log(dan.nepovoljanDan());
 console.log(dan.neuobicajenDan());
