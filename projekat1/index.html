@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h2{
+            color:purple
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <fieldset style="border:none">            
+            <div>
+                <!-- ODABERITE CVECE -->
+                <label for="cvece"><h2>ODABERITE CVECE:</h2></label>
+                <p>
+                    <input type="number" min="0" step="1"
+                    oninput="validity.valid||(value='');"
+                    name="cvece" id="prviInput" placeholder="Cena po cvetu je 150 din."> Ruze 
+                </p>
+                <p>
+                    <input type="number" min="0" step="1"
+                    oninput="validity.valid||(value='');" name="cvece" id="drugiInput" placeholder="Cena po cvetu je 120 din."> Ljiljani
+                </p>
+                <p>
+                    <input type="number" min="0" step="1"
+                    oninput="validity.valid||(value='');" name="cvece" id="treciInput" placeholder="Cena po cvetu je 70 din."> Gerberi
+                </p>
+            </div>
+            <!-- POKLONI -->
+            <div>
+                <label for="pokloni"><h2>ODABERITE POKLONE</h2></label>
+
+                <P>
+                    <input type="checkbox" name="pokloni" id="bombonjera" value="input4" > Bombonjera
+                </P>
+                <p>
+                    <input type="checkbox" name="pokloni" id="cokolada" value="input5" > Cokolada
+                </p>
+                <p>
+                    <input type="checkbox" name="pokloni" id="sampanjac" value="input6"> Sampanjac
+                </p>
+            </div>
+            <!-- PLACANJE -->
+            <div>
+                <label for="placanje"><h2>PLACANJE:</h2></label>
+
+                <p>
+                    <input type="radio" name="placanje" id="input7"> Kes
+                </p>
+                <p>
+                    <input type="radio" name="placanje" id="input8"> Kartica
+                </p>
+            </div>
+            <!-- DUGMADI -->
+            <div>
+                <input type="button" value="Izracunaj" id="Izracunaj">
+                <input type="reset" value="Resetuj">
+                
+            </div>
+            <!-- PORUDZBINA -->
+            <div>
+                <h2>Vaša porudžbina:</h2>
+                <p id="slicice1"></p>
+                <p id="slicice2"></p>
+                <p id="slicice3"></p>
+                <p>Cena bez popusta je: <span id="cena"></span></p>
+                <p>Cena sa popustom je:<span id="cena2"></span></p>
+            </div>
+        </fieldset>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
