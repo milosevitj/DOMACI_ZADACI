@@ -3,6 +3,7 @@ let inputDrugi = document.getElementById ("drugiInput")
 let inputTreci = document.getElementById ("treciInput");
 let btnIzracunaj = document.getElementById("Izracunaj");
 let izracunajCenu = document.getElementById("cena");
+let izracunajCenu2 = document.getElementById("cena2");
 
 
 btnIzracunaj.addEventListener ("click", ()=>{
@@ -17,26 +18,22 @@ btnIzracunaj.addEventListener ("click", ()=>{
             pokloni+=500
         }
     })
-    ////
-    izracunajCenu.innerHTML = (value1*150)+(value2*120)+(value3*70)+pokloni
 
-    ////
-    let inputSedmi = document.getElementById ("input7");
-    let inputOsmi = document.getElementById ("input8");
-    let Izracunajcenu2 = document.getElementById ("cena2")
-    let inputPlacanje = document.querySelectorAll ('input[name="placanje"]');
-    
-        let cena=0;
-        if(inputOsmi.checked && cena>2000){
-            Izracunajcenu2.innerHTML=  ((value1*150)+(value2*120)+(value3*70)+pokloni) *0.9
-        }
-
-        else{
-            izracunajCenu.innerHTML = (value1*150)+(value2*120)+(value3*70)+pokloni
-        }  
+    let inputPlacanje = document.getElementsByName('placanje');
+    inputPlacanje.forEach(input => {
+        let porudzbina= (value1*150)+(value2*120)+(value3*70)+pokloni
+        if(input.checked){
+            if(input.value == 'kartica' && porudzbina>2000){
+                izracunajCenu2.innerHTML = porudzbina*0.9;
+                izracunajCenu.innerHTML = porudzbina
+            }       
+            else if(input.value == 'kes'){
+                izracunajCenu.innerHTML = porudzbina
+            }}  
     })
+    
+})
 
-        // if(inputOsmi && izracunajCenu>2000){
-        //     Izracunajcenu2.innerHTML = izracunajCenu*0.9
-        // }
-
+// else{
+//     alert('Molimo Vas izaberite način plaćanja')
+//         }   
