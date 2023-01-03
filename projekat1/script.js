@@ -4,6 +4,9 @@ let inputTreci = document.getElementById ("treciInput");
 let btnIzracunaj = document.getElementById("Izracunaj");
 let izracunajCenu = document.getElementById("cena");
 let izracunajCenu2 = document.getElementById("cena2");
+let plusBomb=document.getElementById("plusBomb")
+let plusCoko=document.getElementById("plusCoko")
+let plusSamp=document.getElementById("plusSamp")
 
 
 btnIzracunaj.addEventListener ("click", ()=>{
@@ -11,14 +14,25 @@ btnIzracunaj.addEventListener ("click", ()=>{
     let value2=inputDrugi.value;
     let value3=inputTreci.value;
     ////
-    let pokloni=0;
     let inputPokloni = document.querySelectorAll ('input[name="pokloni"]');
-    inputPokloni.forEach(input=>{
-        if(input.checked){
-            pokloni+=500
-        }
-    })
+    let pokloni=0;
 
+    inputPokloni.forEach(input=>{
+        if(input.checked ){
+            pokloni+=500
+            if(input.value == "bombonjera"){
+                plusBomb.innerHTML = "+bombonjera"
+            }
+            else if(input.value == "sampanjac"){
+                plusSamp.innerHTML = "+sampanjac"
+            }
+            else if(input.value == "cokolada"){
+                plusCoko.innerHTML = "+cokolada"
+            }
+        }
+      
+    })
+    ///
     let inputPlacanje = document.getElementsByName('placanje');
     inputPlacanje.forEach(input => {
         let porudzbina= (value1*150)+(value2*120)+(value3*70)+pokloni
@@ -27,7 +41,7 @@ btnIzracunaj.addEventListener ("click", ()=>{
                 izracunajCenu2.innerHTML = porudzbina*0.9;
                 izracunajCenu.innerHTML = porudzbina
             }       
-            else if(input.value == 'kes'){
+            else{
                 izracunajCenu.innerHTML = porudzbina
             }}  
     })
