@@ -1,0 +1,17 @@
+body{
+    background-image: url(pozadina.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+}
+input{
+    size: 100px;
+}
+
+h2{
+    color:purple
+}
+.ljub{
+    color:purple
+}

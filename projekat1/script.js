@@ -7,6 +7,8 @@ let izracunajCenu2 = document.getElementById("cena2");
 let plusBomb=document.getElementById("plusBomb")
 let plusCoko=document.getElementById("plusCoko")
 let plusSamp=document.getElementById("plusSamp")
+let slika1=document.getElementById("slika1")
+
 
 
 btnIzracunaj.addEventListener ("click", ()=>{
@@ -16,7 +18,6 @@ btnIzracunaj.addEventListener ("click", ()=>{
     ////
     let inputPokloni = document.querySelectorAll ('input[name="pokloni"]');
     let pokloni=0;
-
     inputPokloni.forEach(input=>{
         if(input.checked ){
             pokloni+=500
@@ -32,6 +33,7 @@ btnIzracunaj.addEventListener ("click", ()=>{
         }
       
     })
+    
     ///
     let inputPlacanje = document.getElementsByName('placanje');
     inputPlacanje.forEach(input => {
@@ -41,9 +43,11 @@ btnIzracunaj.addEventListener ("click", ()=>{
                 izracunajCenu2.innerHTML = porudzbina*0.9;
                 izracunajCenu.innerHTML = porudzbina
             }       
-            else{
+            else {
                 izracunajCenu.innerHTML = porudzbina
-            }}  
+            }
+        }  
+        
     })
     
 })
