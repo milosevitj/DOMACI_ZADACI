@@ -3,7 +3,6 @@ let pitanje1 = {
     odgovori: ["Albanija","Italija","Slovenija","Makedonija"],
     indeks: [3]
 }
-console.log(pitanje1)
 
 
 let pitanje2 = {
@@ -61,3 +60,11 @@ let pitanje10 = {
 }
 
 let pitanja=[pitanje1,pitanje2,pitanje3,pitanje4,pitanje5,pitanje6,pitanje7,pitanje8,pitanje9,pitanje10]
+
+
+let questions = niz =>{
+    for(i=0;i<niz.length;i++){
+        
+    }
+}
+questions(pitanja)
