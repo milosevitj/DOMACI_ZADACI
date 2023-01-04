@@ -1,0 +1,24 @@
+body{
+    background-image: url(https://images.wallpaperscraft.com/image/single/globe_books_study_192346_3840x2160.jpg);
+    background-size: 100%;
+}
+
+div{
+   margin: 20px;
+   width: 40%;
+   margin-left: 20px
+}
+
+div,p{
+    margin-left: 20px;
+}
+
+#odg{
+    border-color: orange;
+    border-radius: 7px;
+}
+
+#new{
+    border-color: green;
+    border-radius: 7px;
+}
