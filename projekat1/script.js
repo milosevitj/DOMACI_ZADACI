@@ -83,7 +83,7 @@ btnIzracunaj.addEventListener ("click", ()=>{
         if(value3<=10){
         for(let i=0;i<value3;i++){
                 let slikaTreca = document.createElement ("img")
-                slikaTreca.src= "slike/gerber.jpg"
+                slikaTreca.src= "slike/gerber.png"
                 slikaTreca.style.width = "80px"
                 document.getElementById("slika3").appendChild(slikaTreca)
             }
