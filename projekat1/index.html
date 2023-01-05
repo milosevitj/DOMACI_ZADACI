@@ -9,15 +9,16 @@
 
 </head>
 <body>
-    <form method="post">
-        <fieldset style="border:none">            
+    <form method="post" >
+        <fieldset style="border:none" id="forma">            
             <div>
-                <!-- ODABERITE CVECE -->
+                <div><h1>CVEĆARA LILI</h1></div>
+                <!-- CVECE -->
                 <label for="cvece"><h2>ODABERITE CVECE:</h2></label>
                 <p>
                     <input type="number" min="0" step="1"
                     oninput="validity.valid||(value='');"
-                    name="cvece" id="prviInput" placeholder= " &#127801 Cena po cvetu je 150 din." > Ruze 
+                    name="cvece" id="prviInput" placeholder= "Cena po cvetu je 150 din." > Ruze 
                 </p>
                 <p>
                     <input type="number" min="0" step="1"
@@ -56,20 +57,17 @@
             <!-- DUGMADI -->
             <div>
                 <input type="button" value="Izracunaj" id="Izracunaj">
-                <input type="reset" value="Resetuj" onclick="">
+                <input type="reset" value="Resetuj" id="Resetuj">
             </div>
             <!-- PORUDZBINA -->
             <div class="ljub">
                 <h2>Vaša porudžbina:</h2>
-                <div>
-                <img src="" id="slika1">
-                </div>
-                <div>
-                <img src="" id="slika2">
-                </div>
-                <div>
-                <img src="" id="slika3">
-                </div>
+                <div id="slika1"></div>
+                <div id="buketRuza"></div>
+                <div id="slika2"></div>
+                <div id="buketLjiljan"></div>
+                <div id="slika3"></div>
+                <div id="buketGerber"></div>
                 <p id="plusBomb"></p>
                 <p id="plusCoko"></p>
                 <p id="plusSamp"></p>

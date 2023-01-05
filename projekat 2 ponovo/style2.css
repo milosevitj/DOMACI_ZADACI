@@ -1,0 +1,40 @@
+body{
+    background-image: url(https://images.wallpaperscraft.com/image/single/globe_books_study_192346_3840x2160.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    color:rgb(61, 78, 209);
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 2px solid orange;
+}
+
+div{
+    margin: 20px;
+    width: 40%;
+    margin-left: 20px;
+    border: 1px solid orange;
+    border-radius: 8px;
+    background-color: rgb(244, 234, 223);
+ }
+ 
+ div,p, h4{
+     margin-left: 20px;
+ }
+ 
+ #odg{
+     border-color: orange;
+     border-radius: 7px;
+     padding:10px;
+     margin-left:20px;
+ }
+ 
+ #new{
+     border-color: green;
+     border-radius: 7px;
+     padding:10px;
+     margin-left: 10px;
+ }
