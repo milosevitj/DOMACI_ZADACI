@@ -95,7 +95,7 @@ btnIzracunaj.addEventListener ("click", ()=>{
             document.getElementById("buketGerber").appendChild(buketGerber)
         }
 })
-
+//reset
 let btnReset = document.getElementById("Resetuj");
 btnReset.addEventListener("click", ()=>{
     let forma= document.getElementById("forma")
