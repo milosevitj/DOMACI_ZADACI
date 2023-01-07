@@ -117,7 +117,7 @@ bodi.append(dugme, dugme2);
 dugme.addEventListener("click", () => {
     let sviInputi = document.querySelectorAll("input");
     for(let k=0;k<sviInputi.length;k++){
-      sviInputi.disabled=true
+      sviInputi[k].disabled=true
     }
   let stariOdgovori = bodi.querySelector("#prikaziOdgovore");
   if (stariOdgovori) {
