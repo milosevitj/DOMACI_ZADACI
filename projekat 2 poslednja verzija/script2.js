@@ -1,106 +1,170 @@
-let pitanja = [
+let questions = [
     {
-        tekst: "Koja od navedenih država nema izlaz na Jadransko more?",
-        odgovori: ["Albanija","Italija","Slovenija","Makedonija"],
-        indeks: 3,
+        text: "Koja od navedenih država nema izlaz na Jadransko more?",
+        answers: ["Albanija", "Italija", "Slovenija", "Makedonija"],
+        correctAnswer: 3,
     },
-    
-    
+
+
     {
-        tekst: "Kako se zove glavni grad Kipra?",
-        odgovori: ["Larnaka", "Nikozija", "Nijedan od navedenih", "Limasol"],
-        indeks: 1,
+        text: "Kako se zove glavni grad Kipra?",
+        answers: ["Larnaka", "Nikozija", "Nijedan od navedenih", "Limasol"],
+        correctAnswer: 1,
     },
-    
+
     {
-        tekst: "Helsinki je glavni grad...",
-        odgovori:["Finske", "Danske", "Aljaske", "Ukrajine"],
-        indeks:0
+        text: "Helsinki je glavni grad...",
+        answers: ["Finske", "Danske", "Aljaske", "Ukrajine"],
+        correctAnswer: 0
     },
-    
+
     {
-        tekst: "Poljska se ne graniči sa jednom od navedenih država. Kojom?",
-        odgovori: ["Češka", "Belorusija", "Litvanija", "Austrija"],
-        indeks:3
+        text: "Poljska se ne graniči sa jednom od navedenih država. Kojom?",
+        answers: ["Češka", "Belorusija", "Litvanija", "Austrija"],
+        correctAnswer: 3
     },
-    
+
     {
-        tekst: "Kom okrugu pripada grad Vranje?",
-        odgovori: ["Pčinjskom", "Rasinskom", "Bačkom", "Nišavskom"],
-        indeks:0
+        text: "Kom okrugu pripada grad Vranje?",
+        answers: ["Pčinjskom", "Rasinskom", "Bačkom", "Nišavskom"],
+        correctAnswer: 0
     },
-    
+
     {
-        tekst: "U kom glavnom gradu se nalazi 'Zabranjeni grad'?",
-        odgovori: ["Peking", "Džakarta", "Hong Kong", "PjongJang" ],
-        indeks:0
+        text: "U kom glavnom gradu se nalazi 'Zabranjeni grad'?",
+        answers: ["Peking", "Džakarta", "Hong Kong", "PjongJang"],
+        correctAnswer: 0
     },
-    
+
     {
-        tekst: "Ulan Bator je glavni grad..",
-        odgovori: ["Kambodže", "Avagnistana", "Mongolije", "Jermenije"],
-        indeks: 2
+        text: "Ulan Bator je glavni grad..",
+        answers: ["Kambodže", "Avagnistana", "Mongolije", "Jermenije"],
+        correctAnswer: 2
     },
-    
+
     {
-        tekst: "Pored engleskog, u Pakistanu je sluzbeni jezik..",
-        odgovori:["urdu", "turski", "persijski", "francuski"],
-        indeks:0
+        text: "Pored engleskog, u Pakistanu je sluzbeni jezik..",
+        answers: ["urdu", "turski", "persijski", "francuski"],
+        correctAnswer: 0
     },
-    
+
     {
-        tekst: "Koji je pun naziv Mauricijusa?",
-        odgovori: ["Kraljevina Mauricijus", "Republika Mauricijus", "Francuska Republika Mauricijus", "Demokratska Država Mauricijus"],
-        indeks:1
+        text: "Koji je pun naziv Mauricijusa?",
+        answers: ["Kraljevina Mauricijus", "Republika Mauricijus", "Francuska Republika Mauricijus", "Demokratska Država Mauricijus"],
+        correctAnswer: 1
     },
-    
+
     {
-        tekst: "Koji je glavni grad Gruzije",
-        odgovori:["Batumi", "Kutaisi", "Tbilisi", "Gori"],
-        indeks:2
+        text: "Koji je glavni grad Gruzije",
+        answers: ["Batumi", "Kutaisi", "Tbilisi", "Gori"],
+        correctAnswer: 2
     }
 ]
+
 
 
 // let boja=["red", "orange", "green", "yellow", "blue", "gray", "purple", "black", "red"]
 
 let bodi = document.querySelector("body")
-let naslov = document.createElement ("h1")
-naslov.textContent = "ZANIMLJIVA GEOGRAFIJA"
-bodi.appendChild(naslov)
-for(let i=0;i<pitanja.length;i++){
-    let div = document.createElement ("div")
-    let naslov = document.createElement ("h4")
-    naslov.textContent = `${i+1}. ${pitanja[i].tekst}`
-    div.appendChild(naslov)
-    bodi.appendChild(div)
-    for(let j=0;j<pitanja[i].odgovori.length;j++){
-       let odgovor = document.createElement ("p");
-       if(j==0){
-        odgovor.innerHTML=`<input type="radio" checked name=pitanje${i+1}> ${pitanja[i].odgovori[j]} </input>`
-       }
-       else{
-        odgovor.innerHTML=`<input type="radio" name=pitanje${i+1}> ${pitanja[i].odgovori[j]} </input>`
-       }
-       div.appendChild(odgovor)
-    }
-}
-let dugme = document.createElement("button")
-dugme.textContent = "Pošalji odgovore"
-dugme.setAttribute("id","odg")
-let dugme2 = document.createElement ("button")
-dugme2.textContent = "Nova pitanja"
-dugme2.setAttribute("id","new")
-bodi.append(dugme,dugme2)
+let title = document.createElement("h1")
+title.textContent = "ZANIMLJIVA GEOGRAFIJA"
+bodi.appendChild(title)
+let renderQuestions = function (shuffledQuestion) {
+    for (let i = 0; i < 5; i++) {
+        let div = document.createElement("div")
+        let title = document.createElement("h4")
+        title.textContent = `${i + 1}. ${shuffledQuestion[i].text}`
+        div.appendChild(title)
+        bodi.appendChild(div)
+        for (let j = 0; j < shuffledQuestion[i].answers.length; j++) {
+            let answer = document.createElement("p");
 
-
-dugme.addEventListener("click", ()=>{
-    let answer = document.createElement ("p");
-    for(let i=0;i<pitanja.length;i++){
-        if(pitanja[i].indeks){
-            answer.innerHTML = "tacno"
+            if (j === 0) {
+                answer.innerHTML = `<input type="radio" checked name=pitanje${i + 1}'> ${shuffledQuestion[i].answers[j]} </input>`
+            }
+            else {
+                answer.innerHTML = `<input type="radio" name=pitanje${i + 1}'> ${shuffledQuestion[i].answers[j]} </input>`
+            }
+            div.appendChild(answer)
         }
     }
+}
+
+let but = document.createElement("button")
+but.textContent = "Pošalji odgovore"
+but.setAttribute("id", "odg")
+let but2 = document.createElement("button")
+but2.textContent = "Nova pitanja"
+but2.setAttribute("id", "new")
+bodi.append(but, but2)
+
+let questionsShuffle = function (questions) {
+    for (let i = questions.length - 1; i > 0; i--) {
+        let newPos = Math.floor(Math.random() * (i + 1));
+        let temp = questions[i];
+        questions[i] = questions[newPos];
+        questions[newPos] = temp;
+    }
+    return questions
+}
+let newOrder = questionsShuffle(questions)
+but2.addEventListener("click", () => { location.reload(); });
+renderQuestions(newOrder)
+
+
+
+but.addEventListener("click", ()=>{
+    let divAnswers = document.createElement("div");
+    divAnswers.id="SendAnswers"
+    let finalAnswers = document.querySelectorAll ("input:checked");
+    for(let i=0;i<questions.length-5;i++){
+        let paragraf = document.createElement ("p");
+        if(questions[i].index==finalAnswers[i].id){
+            paragraf.textContent = `tacno ste odgovorili na ${i+1} pitanja`;
+            divAnswers.appendChild(paragraf)
+        }
+        else{
+            paragraf.textContent = `niste tacno odgovorili na ${i+1} pitanja`;
+            // finalAnwers.style.color="red";
+            divAnswers.appendChild(paragraf)
+        }
+        bodi.appendChild(divAnswers)
+    }
 })
+
+
+
+// but.addEventListener("click", () => {
+//     for (let i = 0; i < 5; i++) {
+//         let inputi=document.getElementsByName(`pitanje${i+1}`);
+//         for(let j=0;j<4;j++){
+//             if(inputi[j].checked){
+//                 console.log(inputi[j])
+//                 if(j==questions[i].index){
+//                     let tacnoParagraf = document.createElement("p");
+//                     tacnoParagraf.style.color = `green`;
+//                     tacnoParagraf.textContent = `Tačno ste odgovorili na ${i + 1}. pitanje`;
+//                     console.log(tacnoParagraf)
+//                     rezultatiSection.appendChild(tacnoParagraf);
+//                 }
+//                 else {
+//                     let netacnoParagraf = document.createElement("p");
+//                     netacnoParagraf.style.color = `red`;
+//                     netacnoParagraf.textContent = `Netačno ste odgovorili na ${i + 1}. pitanje`;
+//                     let rezultatiSection = document.createElement("div")
+
+//                     rezultatiSection.appendChild(netacnoParagraf);
+//                 }
+//             }
+//         }
+//     }
+// })
+
+
+
+
+
+
+
 
 

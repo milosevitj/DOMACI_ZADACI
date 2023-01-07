@@ -78,4 +78,19 @@ let osmoPitanje = document.getElementById ("pitanje8")
 let devetoPitanje = document.getElementById ("pitanje9")
 let desetoPitanje = document.getElementById ("pitanje10")
 
-let odgovori1= document.get
+let pitanjaShuffle = function(pitanja){
+    let newpos;
+    let temp;
+    for(let i=pitanja.length-1;i>0;i--){
+        newpos=Math.floor(Math.random()*(i+1));
+        temp=pitanja[i];
+        pitanja[i]=pitanja[newpos];
+        pitanja[newpos]=temp;
+    }
+    return pitanja
+}
+let noviNiz = pitanjaShuffle(pitanja)
+console.log(noviNiz)
+innerHTML = noviNiz
+
+
