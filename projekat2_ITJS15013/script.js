@@ -148,14 +148,7 @@ dugme2.addEventListener("click", () => {
     if (stariOdgovori) {
       bodi.removeChild(stariOdgovori);
     }
-  // for (let i = pitanja.length - 1; i >= 0; i--) {
-  //   for (let j = i - 1; j >= 0; j--) {
-  //     let temp = pitanja[i];
-  //     pitanja[i] = pitanja[j];
-  //     pitanja[j] = temp;
-  //   }
-  // }
-  for (let i = pitanja.length - 1; i > 0; i--) {
+    for (let i = pitanja.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     let temp = pitanja[i];
     pitanja[i] = pitanja[j];
@@ -164,4 +157,3 @@ dugme2.addEventListener("click", () => {
   pitanjaOdgovori(pitanja);
   
 });
-
