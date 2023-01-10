@@ -71,7 +71,6 @@ bodi.appendChild(questionsanswersElement);
 
 function questionsanswers(questions) {
   questionsanswersElement.innerHTML = "";
-  //questions i answers
   for (let i = 0; i < questions.length - 5; i++) {
     let div = document.createElement("div");
     let title = document.createElement("h4");
