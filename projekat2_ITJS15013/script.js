@@ -119,10 +119,7 @@ dugme.addEventListener("click", () => {
     for(let k=0;k<sviInputi.length;k++){
       sviInputi[k].disabled=true
     }
-  let stariOdgovori = bodi.querySelector("#prikaziOdgovore");
-  if (stariOdgovori) {
-    bodi.removeChild(stariOdgovori);
-  }
+  
   let prikaziOdgovore = document.createElement("div");
   prikaziOdgovore.id = "prikaziOdgovore";
 
@@ -143,17 +140,16 @@ dugme.addEventListener("click", () => {
   bodi.appendChild(prikaziOdgovore);
 });
 
-dugme2.addEventListener("click", () => {
-    let stariOdgovori = bodi.querySelector("#prikaziOdgovore");
-    if (stariOdgovori) {
-      bodi.removeChild(stariOdgovori);
-    }
+let questionsShuffle = function (pitanja) {
+  for (let i = pitanja.length - 1; i > 0; i--) {
     for (let i = pitanja.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-    let temp = pitanja[i];
-    pitanja[i] = pitanja[j];
-    pitanja[j] = temp;
+          let j = Math.floor(Math.random() * (i + 1));
+          let temp = pitanja[i];
+          pitanja[i] = pitanja[j];
+          pitanja[j] = temp;
+  }
+  pitanjaOdgovori(pitanja)}
 }
-  pitanjaOdgovori(pitanja);
-  
-});
+let noviNiz = questionsShuffle(pitanja)
+dugme2.addEventListener("click", () => { location.reload(); });
+
