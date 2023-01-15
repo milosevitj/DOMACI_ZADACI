@@ -7,8 +7,8 @@ class Knjiga {
     this.cena = c;
   }
   stampaj() {
-    let htmlLista = `<ul>
-            <li>Naslov: ${this.naslov}</li>
+    let htmlLista = `<ul >
+            <li style="list-style-type: none"><b>Naslov: ${this.naslov}</b></li>
             <li>Autor: ${this.autor}</li>
             <li>Godina izdanja: ${this.godinaIzdanja}</li>
             <li>Broj strana:${this.brojStrana}</li>
@@ -67,22 +67,35 @@ class Knjiga {
   get godinaIzdanja() {
     return this._godinaIzdanja;
   }
-  set godinaIzdanja(god) {
-    this._godinaIzdanja = god;
+  set godinaIzdanja(g) {
+    if(g > 0){
+      this._godinaIzdanja = g;
+    }
+    else{
+      this._godinaIzdanja = 0;
+    }
   }
   // brojStrana
   get brojStrana() {
     return this._brojStrana;
   }
   set brojStrana(b) {
-    this._brojStrana = b;
+    if(b > 0){
+      this._brojStrana = b;
+    }else{
+      this._brojStrana = 0;
+    }
   }
   //cena
   get cena() {
     return this._cena;
   }
   set cena(c) {
-    this._cena = c;
+    if (c > 0) {
+      this._cena = c;
+    } else {
+      this._cena = 0;
+    }
   }
 }
 export default Knjiga;

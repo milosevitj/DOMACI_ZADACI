@@ -29,9 +29,7 @@ for (let i = 0; i < knjige.length; i++) {
     bodi.append(paragraf3);
   }
 }
-
 // ukupnaCena - Određuje i vraća koliko ukupno koštaju sve knjge u nizu knjiga
-
 let ukupnaCena = (knjige) => {
   let suma = 0;
   for (let i = 0; i < knjige.length; i++) {
@@ -42,7 +40,6 @@ let ukupnaCena = (knjige) => {
 console.log(ukupnaCena(knjige));
 
 // prosecnaCena - Određuje i vraća kolika je prosečna cena knjige
-
 let prosecnaCena = (knjige) => {
   let suma = 0;
   for (let i = 0; i < knjige.length; i++) {
@@ -53,7 +50,6 @@ let prosecnaCena = (knjige) => {
 console.log(prosecnaCena(knjige));
 
 // prosecnaStranica - Određuje i vraća kolika je prosečna cena jedne stranice knjige
-
 let prosecnaStranica = (knjige) => {
   let suma = 0;
   let sumaBrStranica = 0;
