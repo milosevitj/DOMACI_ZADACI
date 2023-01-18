@@ -11,7 +11,6 @@ for (let i = 0; i < arrTasks.length; i++) {
   list.appendChild(taskItem);
 }
 
-// localStorage.setItem("arrTasks", JSON.stringify(arrTasks));
 input.addEventListener("keyup", (e) => {
   if (e.key == "Enter") {
     let newLiValue = input.value;
@@ -35,14 +34,7 @@ input.addEventListener("keyup", (e) => {
     }
   }
 });
-//obrisani svi taskovi
-
-// localStorage.removeItem("arrTasks");
-// for (let i = 0; i < taskElements.length; i++) {
-//   taskElements[i].remove();
-// }
-
-// brisanje jednog  taska iz memorije
+// brisanje jednog  taska 
 list.addEventListener("click", (e) => {
   if (e.target.tagName == "LI") {
     let taskToRemove = e.target.textContent;
