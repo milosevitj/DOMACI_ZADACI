@@ -3,6 +3,7 @@ let list = document.getElementById("list");
 
 
 let arrTasks = JSON.parse(localStorage.getItem("arrTasks")) || [];
+arrTasks=[]
 
 for (let i = 0; i < arrTasks.length; i++) {
   let task = arrTasks[i];
@@ -10,8 +11,6 @@ for (let i = 0; i < arrTasks.length; i++) {
   taskItem.innerHTML = task;
   list.appendChild(taskItem);
 }
-
-
 input.addEventListener("keyup", (e) => {
   if (e.key == "Enter") {
     let newLiValue = input.value;
@@ -35,15 +34,9 @@ input.addEventListener("keyup", (e) => {
     }
   }
 });
-
 list.addEventListener("click", (e) => {
   if (e.target.tagName == "LI") {
-    let taskToRemove = e.target.textContent;
-    let index = arrTasks.indexOf(taskToRemove);
-    if (index > -1) {
-      arrTasks.splice(index, 1);
-      localStorage.setItem("arrTasks", JSON.stringify(arrTasks));
       e.target.remove();
     }
   }
-});
+);

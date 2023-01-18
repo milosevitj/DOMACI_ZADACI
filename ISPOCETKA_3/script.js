@@ -12,12 +12,12 @@ for (let i = 0; i < arrTasks.length; i++) {
   taskItem.innerHTML = task;
   list.appendChild(taskItem);
 }
-if (taskElements.length > 0) {
-  for (let i = 0; i < taskElements.length; i++) {
-    arrTasks.push(taskElements[i].textContent);
-  }
-}
-localStorage.setItem("arrTasks", JSON.stringify(arrTasks));
+// if (taskElements.length > 0) {
+//   for (let i = 0; i < taskElements.length; i++) {
+//     arrTasks.push(taskElements[i].textContent);
+//   }
+// }
+// localStorage.setItem("arrTasks", JSON.stringify(arrTasks));
 
 input.addEventListener("keyup", (e) => {
   if (e.key == "Enter") {
