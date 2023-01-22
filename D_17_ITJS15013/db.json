@@ -1,0 +1,25 @@
+{
+  "sportisti": [
+    {
+      "imePrezime": "Mathias Lessort",
+      "visina": 2.06,
+      "timovi": [
+        "Unicaja ",
+        "Bayern Munich",
+        "AS Monaco",
+        " Maccabi Tel Aviv",
+        " KK Partizan"
+      ]
+    },
+    {
+      "imePrezime": "Yam Madar",
+      "visina": 1.9,
+      "timovi": ["Hapoel Tel Aviv", " KK Partizan"]
+    },
+    {
+      "imePrezime": "Kevin Punter",
+      "visina": 1.93,
+      "timovi": ["Olympiacos", "Olimpia Milano", " KK Partizan"]
+    }
+  ]
+}
