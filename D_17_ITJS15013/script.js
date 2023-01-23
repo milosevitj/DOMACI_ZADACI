@@ -13,7 +13,7 @@ let getResponse = (resource) => {
     });
   });
 };
-getResponse("http://localhost:3000/sportisti")
+getResponse("sportisti.json")
   .then((sadrzaj) => {
     console.log("sportisti.json resolved", sadrzaj);
     //Ispisati prosečnu visinu svih sportista.

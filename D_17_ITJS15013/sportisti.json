@@ -1,5 +1,4 @@
-{
-  "sportisti": [
+[
     {
       "imePrezime": "Mathias Lessort",
       "visina": 2.06,
@@ -22,4 +21,4 @@
       "timovi": ["Olympiacos", "Olimpia Milano", " KK Partizan"]
     }
   ]
-}
+
