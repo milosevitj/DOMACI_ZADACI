@@ -74,7 +74,7 @@ db.collection("movies")
     });
   })
   .then(() => {
-    console.log("Uspeno je promenjeno prezime");
+    console.log("Uspesno je promenjeno prezime");
   })
   .catch((err) => {
     console.log("greska" + err);
