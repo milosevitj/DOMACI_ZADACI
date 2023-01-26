@@ -26,7 +26,7 @@ db.collection("movies")
       });
   })
   .then(() => {
-    console.log("Uspeno izbrisan zanr filma");
+    console.log("Uspeno izbrisan zanr filma2");
   })
   .catch((err) => {
     console.log("greska" + err);
@@ -52,7 +52,7 @@ db.collection("movies")
       });
   })
   .then(() => {
-    console.log("Uspeno je dodat zanr");
+    console.log("Uspeno je dodat zanr filma3");
   })
   .catch((err) => {
     console.log("greska" + err);
@@ -61,7 +61,7 @@ db.collection("movies")
 db.collection("movies")
   .doc("movie4")
   .set({
-    name: "Moonrise Kingdom",
+    name: "Moonrise",
     director: { name: "Wes", surname: "Ander" },
     release_year: 2012,
     genres: ["Romance", "Drama", "Comedy"],
@@ -74,26 +74,45 @@ db.collection("movies")
     });
   })
   .then(() => {
-    console.log("Uspesno je promenjeno prezime");
+    console.log("Uspesno je promenjeno prezime rezisera");
   })
   .catch((err) => {
     console.log("greska" + err);
   });
 
-//promeni rating prvom filmu
+//promeni rating i godinu prvom filmu
 db.collection("movies")
   .doc("movie1")
   .set(
     {
       rating: 8,
+      release_year: 2009,
     },
     {
       merge: true,
     }
   )
   .then(() => {
-    console.log("Rating je uspesno promenjen");
+    console.log("Rating i godina filma1 su uspesno promenjeni");
   })
   .catch((err) => {
     console.log("Greska" + err);
+  });
+
+// promeni ime cetvrtom filmu
+db.collection("movies")
+  .doc("movie4")
+  .set(
+    {
+      name: "Moonrise Kingdom",
+    },
+    {
+      merge: true,
+    }
+  )
+  .then(() => {
+    console.log("Uspesno je promenjeno ime filma4");
+  })
+  .catch((err) => {
+    console.log("greska" + err);
   });
