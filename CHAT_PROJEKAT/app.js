@@ -46,6 +46,9 @@ btnUpdate.addEventListener("click", (e) => {
 
 nav.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
+    if (document.querySelector(".active")) {
+      document.querySelector(".active").classList.remove("active");
+    }
     let newRoom = e.target.textContent;
     //2.Updajt sobe na koju je kliknuto
     chatroom.updateRoom(newRoom);
@@ -56,4 +59,5 @@ nav.addEventListener("click", (e) => {
       chatUI.templateLI(data);
     });
   }
+  e.target.classList.add("active");
 });
