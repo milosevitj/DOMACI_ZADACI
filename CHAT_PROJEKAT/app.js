@@ -9,6 +9,10 @@ let inputUpdate = document.querySelector("#inpText");
 let btnUpdate = document.querySelector("#btnUpd");
 let divChangeUser = document.querySelector("#changeUser");
 let nav = document.querySelector("nav");
+let form = document.querySelector("#formColor");
+let color = document.querySelector("#color");
+let body = document.querySelector("body");
+let img = document.querySelector("#trash");
 
 let username = "anonymus";
 if (localStorage.username) {
@@ -60,4 +64,29 @@ nav.addEventListener("click", (e) => {
     });
   }
   e.target.classList.add("active");
+});
+
+if (localStorage.color) {
+  body.style.backgroundColor = localStorage.color;
+} else {
+  body.style.backgroundColor = "white";
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  setTimeout(() => {
+    body.style.backgroundColor = `${color.value}`;
+  }, 500);
+  clearTimeout();
+  localStorage.setItem("color", color.value);
+});
+
+ul.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (e.target.tagName === "LI") {
+    console.log(e.target.parentElement);
+    if (confirm("Do your really want to delete this message?")) {
+      e.target.parentNode.removeChild(e.target);
+    }
+  }
 });

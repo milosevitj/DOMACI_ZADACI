@@ -42,8 +42,17 @@
     </section>
 
     <div class="row">
+      <form action="" id="formColor">
         <div class="col-2">&nbsp;</div>
-            <input class="col-6" type="text" name="send" id="inpSend" placeholder="Your message" />
+        <input type="color" name="color" id="color" value="#ffffff" class="col-6">
+        <button type="submit" id="boja" class="col-2">Update color</button>
+        <div class="col-2">&nbsp;</div>
+      </form>
+    </div>
+
+    <div class="row">
+        <div class="col-2">&nbsp;</div>
+            <textarea name="send" id="inpSend" cols="10" rows="4" placeholder="Your message" class="col-6"></textarea>
             <button class="col-2" id="send">Send</button>
         <div class="col-2">&nbsp;</div>
     </div>

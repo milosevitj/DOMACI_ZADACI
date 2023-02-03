@@ -6,7 +6,7 @@
 
 body {
   color: black;
-  background-image: url("https://cdn.wallpapersafari.com/54/0/HluF7g.jpg");
+  /* background-image: url("https://cdn.wallpapersafari.com/54/0/HluF7g.jpg"); */
   font-size: 20px;
 }
 
@@ -81,6 +81,15 @@ h2 {
 
 .active {
   background-color: #ddd;
+}
+
+#inpSend {
+  border-radius: 10px;
+}
+
+img {
+  width: 20px;
+  float: right;
 }
 
 /* ZA MOBILE */

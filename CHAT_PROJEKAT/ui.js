@@ -16,7 +16,7 @@ export class ChatUI {
     } else {
       className = "message-left";
     }
-    let htmlLI = `<div class="li-wrapper"><li class=${className}>
+    let htmlLI = `<div class="li-wrapper" ><li class=${className} > <img src="trash.png" id="trash">
             <span class="username" >${data.username} : </span>
             <span class="message">${data.message}</span>
             <div class="date" style="color:grey">${this.format(data)}</div>
